@@ -1,0 +1,8 @@
+countElements :: [a] -> Int
+countElements [] = 0         
+countElements (_:xs) = 1 + countElements xs  
+
+main :: IO ()
+main = do
+    let list = [1, 2, 3, 4, 5]  
+    putStrLn ("The number of elements in the list is: " ++ show (countElements list))
