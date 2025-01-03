@@ -1,0 +1,20 @@
+data Color = Red | Green | Blue  
+
+describeColor :: Color -> String
+describeColor Red = "This is Red"
+describeColor Green = "This is Green"
+describeColor Blue = "This is Blue"
+
+parseColor :: String -> Maybe Color
+parseColor "Red" = Just Red
+parseColor "Green" = Just Green
+parseColor "Blue" = Just Blue
+parseColor _ = Nothing  
+
+main :: IO ()
+main = do
+    putStrLn "Enter a color (Red, Green, or Blue):"
+    input <- getLine  
+    case parseColor input of  
+        Just color -> putStrLn (describeColor color) 
+        Nothing -> putStrLn "Invalid color entered. Please choose Red, Green, or Blue."
