@@ -1,0 +1,9 @@
+sumTuple :: (Int, Int) -> Int
+sumTuple (x, y) = x + y  
+
+main :: IO ()
+main = do
+    let result1 = sumTuple (3, 5)
+    let result2 = sumTuple (10, 20)
+    putStrLn ("sumTuple (3, 5) = " ++ show result1) 
+    putStrLn ("sumTuple (10, 20) = " ++ show result2) 
