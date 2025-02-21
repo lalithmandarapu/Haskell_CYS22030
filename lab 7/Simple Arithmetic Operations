@@ -1,0 +1,20 @@
+use std::io;
+
+fn main() {
+    let mut input = String::new();
+
+    println!("Enter first integer:");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let a: i32 = input.trim().parse().expect("Invalid number");
+
+    input.clear();
+    println!("Enter second integer:");
+    io::stdin().read_line(&mut input).expect("Failed to read input");
+    let b: i32 = input.trim().parse().expect("Invalid number");
+
+    println!("Addition: {}", a + b);
+    println!("Subtraction: {}", a - b);
+    println!("Multiplication: {}", a * b);
+    println!("Division: {}", a / b);
+    println!("Modulo: {}", a % b);
+}
